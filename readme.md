@@ -2,7 +2,7 @@
 
 This is a full-featured* I2C LCD library for STM32 microcontrollers. The library is object-oriented, allowing you to manage multiple LCDs simultaneously by creating instances for each display.
 
-> Support for reading data and AC addresses is not yet implemented.
+> Support for reading data and current AC address is not yet implemented.
 
 # Usage example
 
