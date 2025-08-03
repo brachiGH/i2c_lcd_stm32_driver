@@ -153,7 +153,7 @@ Here is a simple API reference section you can add to your readme.md:
 # Refrences
 
 ### Table 1
-The address connections (A0-A1-A2) are not bridged with solder it will have the slave address 0x40.
+The address connections (A0-A1-A2) are not bridged with solder it will have the slave address 0x40 (A0=1,A1=1,A2=1).
 ![table 1.0](_resources/figure1.0.png)
 
 <img src="_resources/table1.png" alt="table 1.0" width="400"/>
