@@ -15,13 +15,13 @@
 #include <stdint.h>
 
 #if __has_include("stm32f4xx_hal.h")
-  #include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal.h"
 #elif __has_include("stm32f1xx_hal.h")
-  #include "stm32f1xx_hal.h"
+#include "stm32f1xx_hal.h"
 #elif __has_include("stm32c0xx_hal.h")
-  #include "stm32c0xx_hal.h"
+#include "stm32c0xx_hal.h"
 #elif __has_include("stm32g4xx_hal.h")
-  #include "stm32g4xx_hal.h"
+#include "stm32g4xx_hal.h"
 #endif
 
 #define I2CLCD_WAKEUP_CMD             0x30
@@ -76,8 +76,8 @@
         0: Instruction register (for write) Busy flag (for read)
         1: Data register (for write and read)
  */
-#define I2CLCD_GENERATE_COMMAND_SIGNALS(enBit, rwBit, rsBit)\
- (0x08 | (enBit << I2CLCD_E_POS) | (rwBit << I2CLCD_RW_POS) | (rsBit  << I2CLCD_RS_POS))
+#define I2CLCD_GENERATE_COMMAND_SIGNALS(enBit, rwBit, rsBit) \
+  (0x08 | (enBit << I2CLCD_E_POS) | (rwBit << I2CLCD_RW_POS) | (rsBit << I2CLCD_RS_POS))
 
 /**
  * @brief i2cLcd holds i2c handle and the i2c address.
@@ -115,7 +115,6 @@ typedef struct
  * @attention For more information refer to figure 2
  */
 bool lcdInit(const i2cLcd_handle *lcd);
-
 
 /**
  * @brief Send a command to the LCD.
@@ -186,7 +185,6 @@ bool lcd_shiftCusorOrDisplay(const i2cLcd_handle *lcd, const bool shift_right, c
  * @retval true if command was sent successful else false.
  */
 bool lcd_moveCursor(const i2cLcd_handle *lcd, int row, int col);
-
 
 /**
  * @brief  Moves the cursor to a row 0, col 0 position on the LCD.
